@@ -1,4 +1,5 @@
 var httpreq = require('httpreq');
+var request = require('request');
 
 httpreq.post('http://challenge.code2040.org/api/prefix', {
     parameters: {
@@ -10,7 +11,7 @@ httpreq.post('http://challenge.code2040.org/api/prefix', {
     }else{
         var obj = JSON.parse(res.body);
         console.log(obj.prefix);
-        console.log(obj.array)
+        console.log(res.body)
 ;        var arr = [];
 
         for (var i=0;i<obj.array.length;i++){
@@ -23,17 +24,20 @@ httpreq.post('http://challenge.code2040.org/api/prefix', {
 });
 
 function returnArr(val){
-	console.log(val);
-    httpreq.post('http://challenge.code2040.org/api/prefix/validate', {
-        parameters: {
+    
+    request({
+        url: 'http://challenge.code2040.org/api/prefix/validate', //URL to hit
+        method: 'POST',
+        //Lets post the following key/values as form
+        json: {
             token: 'f5dec5fea57ef33e1268030bcbfa7706',
             array: val
         }
-    }, function (err, res){
-        if (err){
-            console.log(err);
-        }else{
-            console.log(res.body);
-        }
+    }, function(error, response, body){
+        if(error) {
+            console.log(error);
+        } else {
+            console.log(response.statusCode, body);
+    }
     });
 }

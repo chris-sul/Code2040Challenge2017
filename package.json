@@ -17,6 +17,7 @@
   "homepage": "https://github.com/codemastermd/Code2040Challenge2017#readme",
   "dependencies": {
     "httpreq": "^0.4.22",
-    "moment": "^2.15.1"
+    "moment": "^2.15.1",
+    "require": "^2.4.20"
   }
 }
