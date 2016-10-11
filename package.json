@@ -1,0 +1,21 @@
+{
+  "name": "code2040challenge2017",
+  "version": "1.0.0",
+  "description": "The API technical assessment for Code 2040's 2017 Fellows Application",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codemastermd/Code2040Challenge2017.git"
+  },
+  "author": "Chris Sullivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codemastermd/Code2040Challenge2017/issues"
+  },
+  "homepage": "https://github.com/codemastermd/Code2040Challenge2017#readme",
+  "dependencies": {
+    "httpreq": "^0.4.22"
+  }
+}
