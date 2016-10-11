@@ -9,7 +9,9 @@ httpreq.post('http://challenge.code2040.org/api/prefix', {
         console.log(err);
     }else{
         var obj = JSON.parse(res.body);
-        var arr = [];
+        console.log(obj.prefix);
+        console.log(obj.array)
+;        var arr = [];
 
         for (var i=0;i<obj.array.length;i++){
         	if(obj.array[i].substring(0,obj.prefix.length) != obj.prefix){
